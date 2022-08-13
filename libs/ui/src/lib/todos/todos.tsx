@@ -15,7 +15,7 @@ export function Todos({ todos }: TodosProps) {
     <StyledTodos>
       <ul>
         {todos.map((t) => (
-          <li className={'todo'}>{t.title}</li>
+          <li className={'todo'}>{t.title}!!</li>
         ))}
       </ul>
     </StyledTodos>
