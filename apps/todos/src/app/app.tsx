@@ -1,16 +1,37 @@
-import styled from '@emotion/styled';
-import NxWelcome from './nx-welcome';
+import { useEffect, useState } from 'react';
+import { Todo } from '@dm/models';
+import { Ui } from '@dm/ui';
+import { Todos } from '@dm/ui';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+const App = () => {
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-export function App() {
+  useEffect(() => {
+    fetch('/api/todos')
+      .then((_) => _.json())
+      .then(setTodos);
+  }, []);
+
+  function addTodo() {
+    fetch('/api/addTodo', {
+      method: 'POST',
+      body: '',
+    })
+      .then((_) => _.json())
+      .then((newTodo) => {
+        setTodos([...todos, newTodo]);
+      });
+  }
+
   return (
-    <StyledApp>
-      <NxWelcome title="todos" />
-    </StyledApp>
+    <Ui>
+      <h1>Todos</h1>
+      <Todos todos={todos} />
+      <button id={'add-todo'} onClick={addTodo}>
+        Add Todo
+      </button>
+    </Ui>
   );
-}
+};
 
 export default App;
