@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <Ui>
-      <h1>Todolist OK</h1>
+      <h1>Todolist 1</h1>
 
       <Todos todos={todos} />
       <button id={'add-todo'} onClick={addTodo}>
