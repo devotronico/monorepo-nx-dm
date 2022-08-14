@@ -15,22 +15,22 @@ jobs:
     steps:
       - name: START
         uses: actions/checkout@v3
-      - name: SECRETS
-        run: echo "OK 1"
+      - run: echo "SECRETS"
+      - run: echo "OK 1"
       - run: echo "=============================="
-      - name: GITHUB
-        run: echo "workspace - ${{ github.workspace }}"
-        run: echo "repository - ${{ github.repository }}"
-        run: echo "ref - ${{ github.ref }}"
-        run: echo "base_ref - ${{ github.base_ref }}"
-        run: echo "event_name - ${{ github.event_name }}"
-        run: echo "event.action - ${{ github.event.action }}"
-        run: echo "event.pull_request.head.sha - ${{ github.event.pull_request.head.sha }}"
-        run: echo "event.pull_request.merged - ${{ github.event.pull_request.merged }}"
+      - run: echo "GITHUB"
+      - run: echo "workspace - ${{ github.workspace }}"
+      - run: echo "repository - ${{ github.repository }}"
+      - run: echo "ref - ${{ github.ref }}"
+      - run: echo "base_ref - ${{ github.base_ref }}"
+      - run: echo "event_name - ${{ github.event_name }}"
+      - run: echo "event.action - ${{ github.event.action }}"
+      - run: echo "event.pull_request.head.sha - ${{ github.event.pull_request.head.sha }}"
+      - run: echo "event.pull_request.merged - ${{ github.event.pull_request.merged }}"
       - run: echo "=============================="
-      - name: RUNNER
-        run: echo "os - ${{ runner.os }}"
-        run: echo "OK 2"
+      - run: echo "RUNNER"
+      - run: echo "os - ${{ runner.os }}"
+      - run: echo "OK 2"
       - run: echo "=============================="
   main:
     runs-on: ubuntu-latest
