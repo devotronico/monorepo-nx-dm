@@ -1,4 +1,4 @@
-name: la mia action
+name: la-mia-action
 
 on:
   push:
@@ -13,9 +13,10 @@ jobs:
   Mostra-le-Variabili:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "OK 1"
       - name: SECRETS
       uses: actions/checkout@v3
-      - run: echo "OK"
+      - run: echo "OK 2"
       - run: echo "=============================="
   main:
     runs-on: ubuntu-latest
