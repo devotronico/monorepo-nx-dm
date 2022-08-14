@@ -13,9 +13,9 @@ jobs:
   Mostra-le-Variabili:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v3
       - run: echo "OK 1"
       - name: SECRETS
+        uses: actions/checkout@v3
       - run: echo "=============================="
       - name: RUNNER
       - run: echo "OK 2"
