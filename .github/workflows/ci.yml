@@ -19,7 +19,6 @@ jobs:
       - run: echo "=============================="
       - name: RUNNER
       - run: echo "OK 2"
-      - run: echo "os - ${{ runner.os }}"
       - run: echo "=============================="
   main:
     runs-on: ubuntu-latest
