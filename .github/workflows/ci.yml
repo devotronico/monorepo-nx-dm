@@ -10,34 +10,11 @@ env:
   HUSKY: 0
 
 jobs:
-  Mostra le Variabili:
+  Mostra-le-Variabili:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v3
       - name: SECRETS
-      - run: echo "GITHUB_TOKEN - ${{ secrets.GITHUB_TOKEN }}"
-      - run: echo "PAT - ${{ secrets.PAT }}"
-      - run: echo "GH_TOKEN - ${{ secrets.GH_TOKEN }}"
-      - run: echo "=============================="
-      - name: GITHUB
-      - run: echo "workspace - ${{ github.workspace }}"
-      - run: echo "repository - ${{ github.repository }}"
-      - run: echo "ref - ${{ github.ref }}"
-      - run: echo "base_ref - ${{ github.base_ref }}"
-      - run: echo "event_name - ${{ github.event_name }}"
-      - run: echo "event.action - ${{ github.event.action }}"
-      - run: echo "event.pull_request.head.sha - ${{ github.event.pull_request.head.sha }}"
-      - run: echo "event.pull_request.merged - ${{ github.event.pull_request.merged }}"
-      - run: echo "=============================="
-      - name: RUNNER
-      - run: echo "os - ${{ runner.os }}"
-      - run: echo "=============================="
-      - name: STEPS
-      - run: echo "versions.outputs.node_version - ${{ steps.versions.outputs.node_version }}"
-      - run: echo "package_manager.outputs.name - ${{ steps.package_manager.outputs.name }}"
-      - run: echo "yarn-cache-dir-path.outputs.dir - ${{ steps.yarn-cache-dir-path.outputs.dir }}"
-      - name: JOB
-      - run: echo "status - ${{ job.status }}"
+      - run: echo "OK"
       - run: echo "=============================="
   main:
     runs-on: ubuntu-latest
