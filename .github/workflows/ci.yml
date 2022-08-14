@@ -13,8 +13,8 @@ jobs:
   Mostra-le-Variabili:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v3
       - name: SECRETS
+      uses: actions/checkout@v3
       - run: echo "OK"
       - run: echo "=============================="
   main:
